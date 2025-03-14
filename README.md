@@ -27,10 +27,11 @@ Requirements to run the tool:
 - Python >= 3
 - Install OpenMS
 - Install Docker
-- Download swissprot database and speficy path to it
-- Download Comet and specify comet.exe file (make sure it is executable)
-- pull docker container (https://hub.docker.com/r/elisamaske/predict_tolerances_container) for param-medic predictions with:
+- Download Swissprot database as fasta and speficy path to it (https://www.uniprot.org/uniprotkb?query=reviewed:true)
+- Download Comet and specify comet.exe file (make sure it is executable, https://github.com/UWPR/Comet/releases/tag/v2025.01.0)
+- Pull docker container for param-medic predictions with (https://hub.docker.com/r/elisamaske/predict_tolerances_container)
 
   ```
   docker pull elisamaske/predict_tolerances_container
   ```
+
