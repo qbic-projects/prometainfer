@@ -29,7 +29,7 @@ Requirements to run the tool:
 - Install Docker
 - Download swissprot database and speficy path to it
 - Download Comet and specify comet.exe file (make sure it is executable)
-- pull docker container 'predict_tolerances_container' for param-medic predictions with:
+- pull docker container (https://hub.docker.com/r/elisamaske/predict_tolerances_container) for param-medic predictions with:
 
   ```
   docker pull elisamaske/predict_tolerances_container
