@@ -20,7 +20,7 @@ Official repository for ProMetaInfer: A tool for inferring missing metadata in p
   ```
 
 
-### Run ProMetaInfer with: 
+### Run prometainfer with: 
 
 ```
 python infer_metadata.py --mzml_dir <path_to_mzml_files> \
