@@ -186,7 +186,7 @@ def extract_features_from_idxml(idxml_dir):
     df_results = pd.DataFrame.from_dict(results, orient="index").reset_index(drop=True)
 
     # Fehlende Werte mit Mittelwerten der Spalten füllen
-    df_results.fillna(df_results.mean(numeric_only=True), inplace=True)
+    #df_results.fillna(df_results.mean(numeric_only=True), inplace=True)
 
     return(df_results)
 
@@ -214,7 +214,7 @@ def create_feature_file(idxml_dir, output_dir):
         merged_df = features_df.merge(peptide_stats_df, on="Filename", how="left")
 
         # Fill missing values after merge with nans
-        merged_df.fillna(merged_df.mean(numeric_only=True), inplace=True)
+        #merged_df.fillna(merged_df.mean(numeric_only=True), inplace=True)
 
         # Move "Filename" column to beginning
         merged_df.insert(0, "Filename", merged_df.pop("Filename"))

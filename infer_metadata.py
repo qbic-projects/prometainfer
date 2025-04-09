@@ -9,6 +9,7 @@ from create_parameter_files import create_parameter_files
 from run_comet_adapter import run_comet_adapter  
 from create_feature_file import create_feature_file
 from ml_prediction import ml_prediction
+from metadata_file_creation import metadata_file_creation
 
 # Set up the argument parser for input and output directories
 def parse_arguments():
@@ -97,7 +98,7 @@ def main():
     # using param-medic and stores tolerance files in output_dir/tolerances (one file per mzML)
     # If a file already exists, the creation for this file is being skipped.
     print("[3/7] Starting param-medic tolerance calculations...")
-    run_param_medic(args.mzml_dir, args.output_dir)
+    #run_param_medic(args.mzml_dir, args.output_dir)
 
     # 4. Parameter file creation
     # Create parameter file based on extracted param-medic parameters and instrument information from
@@ -131,6 +132,7 @@ def main():
     # Stores predictions incl. estimated accuracy as .csv files
     print(f"[7/7] Predicting metadata...")
     ml_prediction(args.output_dir, os.path.join(args.output_dir,"extracted_features.csv"))
+    metadata_file_creation(args.output_dir)
     print(f"Metadata inference completed. Results stored as predicted_metadata.csv in {args.output_dir}")
 
 if __name__ == '__main__':
@@ -140,8 +142,8 @@ if __name__ == '__main__':
 
     #### TODO Thursday:
 #### add prediction.py script to give out prediction + accuracies per ML model
-#### retrain same two models on only annotated files and do the same for these models
 #### (prediction of model with highest accuracy wins)
+#### add Generated text fields
 
 
 
