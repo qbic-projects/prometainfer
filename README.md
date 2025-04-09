@@ -16,6 +16,19 @@ Official repository for ProMetaInfer: A tool for inferring missing metadata in p
   docker pull elisamaske/predict_tolerances_container
   ```
 
+### Recommended Setup:
+
+We recommend running ProMetaInfer in a dedicated Conda environment for better reproducibility and dependency management.
+
+To set it up, run the following:
+
+  ```
+  conda create -n prometa_env python=3.10
+  conda activate prometa_env
+  pip install -r requirements.txt
+  ```
+
+Make sure all additional tools and databases (OpenMS, Docker, SwissProt FASTA, Comet) are properly installed and configured as described above.
 
 ### Run Pipeline with: 
 
