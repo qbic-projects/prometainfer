@@ -42,5 +42,5 @@ python infer_metadata.py --mzml_dir <path_to_mzml_files> \
 
 
 
-> [!NOTE]
+> [!IMPORTANT]
 > Give complete path to comet executable
